@@ -1,0 +1,23 @@
+[project]
+name = "campus-library-sql"
+version = "1.0.0"
+description = "A small library management database in SQLite: schema, seed data, SQL query collection and a Python CLI"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+[project.scripts]
+library = "library.cli:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.coverage.run]
+source = ["library"]
+branch = true
+omit = ["*/__main__.py"]
+
+[tool.coverage.report]
+fail_under = 85
+show_missing = true
