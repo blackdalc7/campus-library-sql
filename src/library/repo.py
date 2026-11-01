@@ -18,6 +18,7 @@ class LibraryError(Exception):
 
 @dataclass(frozen=True)
 class Overdue:
+    """A loan past its due date, as listed by the overdue report."""
     member: str
     email: str
     title: str
@@ -26,6 +27,7 @@ class Overdue:
 
     @property
     def fine(self) -> float:
+        """Late fine for this loan, capped at ``FINE_CAP``."""
         return min(FINE_CAP, self.days_late * FINE_PER_DAY)
 
 

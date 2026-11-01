@@ -1,5 +1,7 @@
 # 📚 Campus Library (SQL)
 
+[![CI](https://github.com/blackdalc7/campus-library-sql/actions/workflows/ci.yml/badge.svg)](https://github.com/blackdalc7/campus-library-sql/actions/workflows/ci.yml)
+
 A small library management database built with **SQLite**. It has a normalised schema with constraints, views and triggers, realistic seed data, a collection of example queries that goes from basic `SELECT`s to window functions, and a Python command line app on top.
 
 I built this while learning SQL for a databases module. I wanted something more interesting than a single table, so it covers the usual library problems: many-to-many authors, loans, overdue fines, and rules like "students can only hold 3 books".
